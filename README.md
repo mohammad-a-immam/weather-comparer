@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Weather Comparer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A zip code location based weather comparer web page, created as a coding exercise for Elevate Funding Job Application.
 
-## Available Scripts
+## Demo
 
-In the project directory, you can run:
+Please visit live website: https://lemon-pond-0e89fe10f.1.azurestaticapps.net
 
-### `npm start`
+## Usage Instructions
+- OpenWeatherMap API free tier limitations will apply. https://openweathermap.org/price
+- You may search any united states zip code for current weather details for the city
+on the provided 4 weather comparison components. This allows you to compare current weather in upto
+4 different cities at once.
+- Use the Restart button to reset the cities searched and implement a new search.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Framework
+ReactJS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Resources Used
+- OpenWeatherMap API https://openweathermap.org/api
 
-### `npm test`
+## Libraries
+- AXIOS for http calls
+- Bootstrap css for styling
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Running Locally or Building on the Project
+- Make sure npm is installed
+- Clone the repository
+- Create an account in OpenWeatherMap and obtain an api key. (It takes about 5-7 minutes for the api key to be 
+activated and working)
+- Modify the `REACT_APP_OPENWEATHER_APIKEY` value with your obtained api key.
+- In the terminal on the project root folder, use `npm start` to locally debug the project.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Files
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Majority of this application and its file structure is setup through `create-react-app`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- App.js
+  - Contains all custom code for the single page simple application.
+- App.css
+  - Contains styling mostly provided by `cra` defaults.
+- assets
+  - Contains any static assets used in this app.
+- .env.example
+  - A template to setup the environment variable for your own openweathermap api key.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Deployment
+- CD implemented and environment set through by GitHub Action when deploying the container. (workflow/yaml)

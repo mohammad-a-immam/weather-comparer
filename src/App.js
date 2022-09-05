@@ -18,7 +18,7 @@ function App() {
             <Navbar.Toggle />
             <Navbar.Collapse className="justify-content-end">
               <Navbar.Text className={"text-light"}>
-                Presented by: Mohammad A Immam
+                Presented by: <a href={"https://github.com/mohammad-a-immam"} className="text-light text-decoration-underline">Mohammad A Immam</a>
               </Navbar.Text>
             </Navbar.Collapse>
           </Container>
@@ -64,7 +64,7 @@ function App() {
 
       function GetWeather(){
           const api_key = process.env.REACT_APP_OPENWEATHER_APIKEY;
-          if(api_key == null || api_key == "your_openweathermap_apikey"){
+          if(api_key === null || api_key === "your_openweathermap_apikey"){
               setLoading("no api key!");
               return;
           }
@@ -81,7 +81,7 @@ function App() {
                   let utc = d.getTime() + (d.getTimezoneOffset() * 60000);
                   let nd = new Date(utc + (1000*res.data.timezone));
                   setLocalTime(nd.toLocaleString());
-              }).catch((e)=>{
+              }).catch(()=>{
                   setLoading("Unexpected Error")
           })
       }
@@ -103,20 +103,20 @@ function App() {
                     <div className="d-flex">
                         <div className="temp-details flex-grow-1">
                             <p className="">
-                                <img src="https://i.imgur.com/B9kqOzp.png" height="17px"/>
+                                <img src="https://i.imgur.com/B9kqOzp.png" height="17px" alt={"icon"}/>
 
                                 <span> {data.wind.speed} mph @ {data.wind.degree}&deg; </span>
                             </p>
 
                             <p className="my-1">
-                                <img src={require("./assets/img/humidity.png")} width={15}/>
+                                <img src={require("./assets/img/humidity.png")} width={15} alt={"icon"}/>
                                 <span> {data.main.humidity}% </span>
                             </p>
 
                         </div>
 
                         <div>
-                            <img src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} width="50px"/>
+                            <img src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} width="50px" alt={"icon"}/>
                         </div>
                     </div>
                 </div>:
