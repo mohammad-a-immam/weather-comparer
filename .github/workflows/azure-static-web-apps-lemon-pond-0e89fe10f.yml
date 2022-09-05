@@ -8,6 +8,9 @@ on:
     types: [opened, synchronize, reopened, closed]
     branches:
       - main
+      
+env:
+  REACT_APP_OPENWEATHER_APIKEY: ${{ secrets.OPENWEATHER_APIKEY }}
 
 jobs:
   build_and_deploy_job:
