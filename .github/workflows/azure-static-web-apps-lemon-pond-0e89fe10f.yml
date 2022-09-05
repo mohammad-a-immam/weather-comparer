@@ -11,7 +11,7 @@ on:
       
 env:
   REACT_APP_OPENWEATHER_APIKEY: ${{ secrets.OPENWEATHER_APIKEY }}
-  CI=false
+  CI: false
 
 jobs:
   build_and_deploy_job:
